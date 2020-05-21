@@ -18,9 +18,8 @@ const Reservations = ({reservations, removeReservation}) => {
   })
 
 return (
-  <div className="resy-container">
-  reservations here!
-  {resCards}
+  <div className='resy-container'>
+    {resCards}
   </div>
 )
 
