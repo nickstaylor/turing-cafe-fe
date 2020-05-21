@@ -18,3 +18,10 @@
   font-family: 'Pacifico', cursive;
   font-size: 50px;
 }
+
+.make-reservations {
+  color: teal;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
