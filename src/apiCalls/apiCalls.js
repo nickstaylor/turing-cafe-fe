@@ -16,7 +16,7 @@ export const postToApi = (newReservation)=>{
       name: newReservation.name,
       date: newReservation.date,
       time: newReservation.time,
-      number: newReservation.number
+      number: parseInt(newReservation.number)
     })
   })
   .then(response => response.json())
