@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Form from '../Form/Form';
 import Reservations from '../Reservations/Reservations'
 import './App.css';
-import { fetchCall } from '../apiCalls/apiCalls'
+import { fetchCall, postToApi } from '../apiCalls/apiCalls'
 
 class App extends Component {
   constructor(){
@@ -21,7 +21,9 @@ class App extends Component {
   }
 
   addReservation = (newReservation) => {
+    console.log('newres', newReservation)
     this.setState({reservations: [...this.state.reservations, newReservation]})
+    postToApi(newReservation)
   }
 
   removeReservation = (id) => {
