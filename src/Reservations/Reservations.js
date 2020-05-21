@@ -18,8 +18,11 @@ const Reservations = ({reservations, removeReservation}) => {
   })
 
 return (
+  <div>
+  <h1 className="header-for-reservations">All Reservations</h1>
   <div className='resy-container'>
     {resCards}
+  </div>
   </div>
 )
 
