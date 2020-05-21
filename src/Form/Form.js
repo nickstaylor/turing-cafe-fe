@@ -8,7 +8,7 @@ export default class Form extends Component {
       name: '',
       date: '',
       time: '',
-      guests: ''
+      number: ''
     }
   }
 
@@ -23,6 +23,7 @@ export default class Form extends Component {
   submitReservation = (event) => {
     event.preventDefault();
     const { addReservation } = this.props;
+    console.log(this.state.guests)
     const newReservation = { ...this.state, id: Date.now()};
     addReservation(newReservation);
     this.resetInputs();
@@ -33,7 +34,7 @@ export default class Form extends Component {
       name: '',
       date: '',
       time: '',
-      guests: ''
+      number: ''
     })
   }
 
@@ -63,10 +64,10 @@ export default class Form extends Component {
           onChange={this.handleChange}
         />
         <input
-          type='text'
+          type= 'text'
           placeholder='Number of guests'
-          value={this.state.guests}
-          name='guests'
+          value={this.state.number}
+          name='number'
           onChange={this.handleChange}
         />
         <button
