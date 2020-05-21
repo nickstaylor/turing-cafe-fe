@@ -4,3 +4,14 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
+
+
+.header-for-reservations {
+  border: 3px solid whitesmoke;
+  color: teal;
+  font-size: 30px;
+  /* width: 300px; */
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+}
