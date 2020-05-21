@@ -1,0 +1,9 @@
+.reservation-card {
+box-sizing: border-box;
+border: 2px solid #038080;
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
