@@ -12,7 +12,6 @@ class App extends Component {
     }
   }
 
-
   componentDidMount(){
     fetchCall()
     .then(data => {
@@ -21,12 +20,15 @@ class App extends Component {
     .catch(err => console.log(err))
   }
 
-  addReservation = () => {
-
+  addReservation = (newReservation) => {
+    this.setState({reservations: [...this.state.reservations, newReservation]})
   }
 
-  removeReservation = () => {
-
+  removeReservation = (id) => {
+    const updatedReservations = this.state.reservations.filter(res => {
+      return res.id !== parseInt(id)
+    })
+    this.setState({reservations: updatedReservations})
   }
 
 
@@ -38,10 +40,12 @@ class App extends Component {
         <div className='resy-form'>
         <Form addReservation={this.addReservation} />
         </div>
+        {!this.state.reservations.length ?
+          <div className="make-reservations">Make a Reservation!</div> :
         <Reservations
         reservations={this.state.reservations}
         removeReservation={this.removeReservation}
-        />
+        />}
       </div>
     )
   }
