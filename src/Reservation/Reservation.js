@@ -4,16 +4,6 @@ import "./Reservation.css"
 const Reservation = (props) => {
   console.log('reservation', props)
 
-  // name = {reservation.name}
-  // date = {reservation.date}
-  // number = {reservation.number}
-  // time = {reservation.time}
-  // id = {reservation.id}
-  // key = {reservation.id}
-  // removeReservation={removeReservation} />
-  // <h3>Title: {title}</h3>
-  // <p>Description: {description}</p>
-  // <button onClick={()=>{deleteIdea(id)}}>🗑</button>
   return (
     <div className="reservation-card">
     <h3>{props.name}</h3>
